@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Приведение типов JavaScript</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="material/styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+  </head>
+  <body class="shower list">
+    <header class="caption">
+      <h1>Типы данных JavaScript</h1>
+    </header>
+
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">План на сегодня</h2>
+        <ul>
+          <li>Детальнее посмотрим на типы данных</li>
+          <li>Приведение типов</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">Типы данных бывают</h2>
+        <ul>
+          <li>Простые типы</li>
+          <li>Объектные типы</li>
+          <li>this</li>
+        </ul>
+        <p>При этом всё ведёт себя как объект 👍</p>
+      </div>
+    </section>
+    <section class="slide purple">
+      <h2 class="white">Объектные типы</h2>
+      <img class="cover" src="public/images/obj.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">Язык динамической типизации</h2>
+        <p>Тип имеют не переменные, а значение вних</p>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">Типы в JS можно разделить на</h2>
+        <ul>
+          <li>Изменяемые</li>
+          <li>Неизменяемые - все простые типы</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="shout">Числа</h2>
+      </div>
+    </section>
+    <section class="slide purple">
+      <h2 class="white">Отрицательных чисел не существует 😱</h2>
+      <img class="cover" src="public/images/number.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <h2 class="white">Infinity/NaN</h2>
+      <img class="cover" src="public/images/infinity.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="shout">Строки</h2>
+      </div>
+    </section>
+    <section class="slide purple">
+      <h2 class="white">Ковычки</h2>
+      <img class="cover" src="public/images/string.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <h2 class="white">Методы для работы над строками</h2>
+      <img class="cover" src="public/images/substr.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">Какие ещё есть методы</h2>
+        <ul>
+          <li>.trim()</li>
+          <li>.replace()</li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String"
+              >Большме методов тут</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="shout">Логический тип данных</h2>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">7 ложных значений</h2>
+        <ul>
+          <li>false</li>
+          <li>null</li>
+          <li>undefined</li>
+          <li>''</li>
+          <li>0, -0, NaN</li>
+        </ul>
+        <p>💡 ЗАПОМНИТЕ ЭТО</p>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">Логические операторы</h2>
+        <ul>
+          <li>&&</li>
+          <li>||</li>
+          <li>!</li>
+          <li>!!</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <h2 class="white">Логические операторы</h2>
+      <img class="cover" src="public/images/boolO.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <h2 class="white">Практическое применение &&</h2>
+      <img class="cover" src="public/images/and.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <h2 class="white">Практическое применение ||</h2>
+      <img class="cover" src="public/images/or.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="shout">undefined</h2>
+      </div>
+    </section>
+    <section class="slide purple">
+      <h2 class="white">В каких ситуациях мы можем его получить</h2>
+      <img class="cover" src="public/images/undefined.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="shout">Приведение типов</h2>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">ToString</h2>
+        <h3 class="">String(value)</h3>
+        <ul>
+          <li>Для примитивов добавит ковычки "value"</li>
+          <li>Для объектов ToPrimitive</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <h2 class="white">ToString</h2>
+      <img class="cover" src="public/images/toString.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">ToNumber</h2>
+        <h3 class="">Number(value)</h3>
+        <ul>
+          <li>true/false - 1/0</li>
+          <li>Строку пробует конфертировать</li>
+          <li>Для объектов ToPrimitive</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">ToNumber</h2>
+        <h3 class="">Строку пробует конфертировать</h3>
+        <ul>
+          <li>Путстая строка - всегда 0</li>
+          <li>Отбросит пробелы и пробует привести к числу</li>
+          <li>Если хоть 1 неверный символ - всегда NaN</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <h2 class="white">ToNumber</h2>
+      <img class="cover" src="public/images/toNumber.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <img class="cover" src="public/images/json.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="shout">Когда срабатывает приведение типов</h2>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">Когда срабатывает</h2>
+        <ul>
+          <li>Явное</li>
+          <li>Неявное</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">ToBoolean</h2>
+        <ul>
+          <li>Boolean()</li>
+          <li>!!</li>
+          <li>if, for, while, do/while</li>
+          <li>Тернарный оператор <mark>? :</mark></li>
+          <li>Левая часть <mark>&&</mark> и <mark>||</mark></li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">ToString</h2>
+        <ul>
+          <li>String()</li>
+          <li>Доступ по ключу объекта <mark>object[value]</mark></li>
+          <li>Шиблонные строки <mark>`${value}`</mark></li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">ToNumber</h2>
+        <ul>
+          <li>Number()</li>
+          <li>Математические и битовые операции</li>
+          <li>Кроме бинорного <mark>+</mark> (но не для объектов 🤯)</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">Сравнениен</h2>
+        <p>
+          Сравнение <b>БЕЗ</b> приведения типа <mark>===</mark> и
+          <mark>!==</mark>
+        </p>
+      </div>
+    </section>
+    <section class="slide purple">
+      <h2 class="white">NaN</h2>
+      <img class="cover" src="public/images/nan.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="shout">this</h2>
+      </div>
+    </section>
+
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">this</h2>
+        <p>контекст вызова функции</p>
+      </div>
+    </section>
+
+    <section class="slide purple">
+      <h2 class="white">без this</h2>
+      <img class="cover" src="public/images/this.png" alt="html code" />
+    </section>
+    <section class="slide purple">
+      <h2 class="white">с this</h2>
+      <img class="cover" src="public/images/this2.png" alt="html code" />
+    </section>
+
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="">О чём мы сегодня говорили</h2>
+        <ul>
+          <li>Посмотрели на типы данных</li>
+          <li>Приведение типов</li>
+          <li>поздаровались с this</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide purple">
+      <div class="content">
+        <h2 class="shout">Практика</h2>
+      </div>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="dist/shower.js"></script>
+    <!-- Copyright © 2022 Yours Truly, Famous Inc. -->
+  </body>
+</html>
